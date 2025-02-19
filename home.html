@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Musical</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="/src/todos.png" type="image/x-icon">
+
+</head>
+
+<body class="bg-white g-0 overflow-x-hidden">
+
+    <div id="loader-pagina">
+
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+    </div>
+
+    <div style="display: none;" id="loader-pagina2">
+
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+    </div>
+    
+
+    <nav class="navbar bg-body-tertiary bg-white">
+
+        <form class="container-fluid justify-content-between d-flex nav-responsive" role="search">
+
+            <svg type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling2"
+                aria-controls="offcanvasScrolling" xmlns="http://www.w3.org/2000/svg" width="40" fill="currentColor"
+                class="ms-2 bi bi-border-width boton-desplegar" viewBox="0 0 16 16">
+                <path
+                    d="M0 3.5A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5zm0 5A.5.5 0 0 1 .5 8h15a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5" />
+            </svg>
+
+            <div class="d-flex align-items-center botones-usuario">
+
+                <button onclick="returnSesion()"
+                    class="btn btn-sm btn-outline-secondary ms-4 px-3 fs-6 boton-sesion log-out" type="button">Iniciar
+                    sesión</button>
+                <button onclick="returnRegister()"
+                    class="btn btn-sm btn-outline-secondary px-3 m-4 fs-6 boton-registro log-out"
+                    type="button">Registrarse</button>
+
+                <button id="cerrar-sesion" class="btn btn-sm btn-outline-secondary ms-4 px-3 fs-6 boton-registro log-in"
+                    type="button">Cerrar sesión</button>
+
+                <button onclick="returnCuenta()"
+                    class="btn btn-sm btn-outline-secondary ms-4 px-3 fs-6 boton-sesion log-in"
+                    type="button">Cuenta</button>
+
+
+            </div>
+
+            <img src="/src/LogoHome.png" width="180" class="pb-3" alt="usb.png">
+
+
+            <div class="d-flex align-items-center">
+
+                <input id="searchInput" class="esconder-nav form-control input-search me-3" placeholder="Buscar">
+
+                <div class="pb-1 ms-4 log-in">
+
+                    <a class="iconos-compras" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span id="cantidad-carro" class="numero-compras">0</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" fill="black" class="bi bi-cart pt-2"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </a>
+
+                </div>
+
+                <div class="pb-1 ms-4 me-4 log-in">
+
+                    <a class="iconos-compras" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal10">
+                        <span id="cantidad-favorito" class="numero-compras mt-1">0</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" fill="black" class="bi bi-heart pt-2 corazon"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                        </svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </nav>
+
+    <!-- Modal FAVORITOS-->
+    <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel10" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="exampleModalLabel10">Lista de favoritos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="container-favoritos-vacio" class="carro-vacio">
+
+                        <p class="fs-5 fw-bold fst-italic">¡Oh no!</p>
+                        <p>No tienes productos en tu lista de favoritos</p>
+
+                    </div>
+
+                    <div class="row">
+
+                        <table class="table disabled" id="titulos-favoritos">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" scope="col">Producto</th>
+                                    <th class="text-center" scope="col">Detalle</th>
+                                    <th class="text-center" scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="container-productos-favorito" class="disabled">
+
+                                <!--CONTAINER CARRITO PRODUCTOS
+                                <tr>
+                                    <th class="text-center"><a href="#"><img src="./src/Accesorios/accesorio-1.png" width="100" alt="producto"></a></th>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0">Gafas re piolas <br> <span class="mb-0 fw-bold fst-italic mt-1">50.000$</span> </p></td>
+                                    <td class="text-center elementos-centrar-carro"><a class="iconos-eliminar" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                      </svg></a></td>
+                                </tr>-->
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <div>
+
+                        <button type="button" class="btn btn-secondary boton-registro"
+                            data-bs-dismiss="modal">Cerrar</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal mostrar producto-->
+    <div class="modal fade" id="exampleModalProducto" tabindex="-1" aria-labelledby="exampleModalLabelProducto"
+        aria-hidden="true">
+        <div id="contenedor-mostrar-producto" class="modal-dialog modal-dialog-centered modal-lg">
+
+            <!--
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <div class="d-flex">
+
+                        
+                        <img class="img-fluid w-50" src="./src/Accesorios/accesorio-1.png" alt="asdad">
+
+                        <div class="ms-4 mt-2">
+
+                            <p class="fs-3 fw-bold">Super mega producto</p>
+                            <p>Es de los mejores productos que alguna vez se haya creado, jajajajaja</p>
+                            <p class="fw-bold fst-italic">50.000$</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>-->
+
+
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="exampleModalLabel">Carro de compras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="container-carrito-vacio" class="carro-vacio">
+
+                        <p class="fs-5 fw-bold fst-italic">¡Oh no!</p>
+                        <p>El carro se encuentra vacío</p>
+
+                    </div>
+
+                    <div class="row">
+
+                        <table class="table disabled" id="titulos-carrito">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" scope="col">Producto</th>
+                                    <th class="text-center" scope="col">Detalle</th>
+                                    <th class="text-center" scope="col">Precio</th>
+                                    <th class="text-center" scope="col">Cantidad</th>
+                                    <th class="text-center" scope="col">Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="container-productos-carrito" class="disabled">
+
+                                <!--CONTAINER CARRITO PRODUCTOS
+                                <tr>
+                                    <th class="text-center"><img src="./src/Accesorios/accesorio-1.png" width="100" alt="producto"></th>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0">Gafas re piolas</p></td>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0 fw-bold fst-italic mt-1">50.000$</p></td>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0">1</p></td>
+                                    <td class="text-center elementos-centrar-carro"><a class="iconos-eliminar" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                      </svg></a></td>
+                                </tr>-->
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+
+                    <div class="pt-2">
+
+                        <p>Total: <span class="fw-bold fst-italic" id="span-total">0$</span></p>
+
+                    </div>
+
+                    <div>
+
+                        <a id="carrito-boton-comprar" class="btn btn-secondary boton-sesion disabled">Comprar</a>
+                        <button type="button" class="btn btn-secondary boton-registro"
+                            data-bs-dismiss="modal">Cerrar</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-around container-carrusel">
+
+        <!--
+
+        <div class="col-md-6">
+
+            <img src="/src/carrusel-1.png" class="img-fluid py-4" alt="carrusel-1.png">
+            
+        </div>
+        -->
+
+        <div id="carouselExampleAutoplaying1" class="carousel slide col-md-6" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/src/carrusel-1.1.png" class="d-block w-100 py-4 rounded" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/src/carrusel-1.2.png" class="d-block w-100 py-4 rounded" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/src/carrusel-1.3.png" class="d-block w-100 py-4 rounded" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying1"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying1"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--
+        <div class="col-md-4">
+
+            <img src="/src/carrusel-2.png" class="img-fluid py-4" alt="carrusel-2.png">
+
+        </div>-->
+
+        <div id="carouselExampleAutoplaying2" class="carousel slide col-md-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/src/carrusel-2.png" class="d-block w-100 py-4" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/src/carrusel-2.1.png" class="d-block w-100 py-4" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="row d-flex justify-content-around">
+
+        <div class="col-md-3 ms-2 d-flex row align-self-start">
+
+            <div class="col-md-12 px-4 py-4 pb-2">
+
+                <p class="fs-5">Filtros</p>
+
+            </div>
+
+            <div class="col-md-12 row containter-filtros d-flex justify-content-center">
+
+                <div id="mejorValorado" class="col-md-11 botones-filtros mt-4 mb-3">
+
+                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+
+                        <p class="pt-3 pb-1 fs-5 texto-prueba">Mejor valorado</p>
+                        <img class="pt-1" src="/src/estrella.png" width="40" alt="estrella">
+
+                    </a>
+
+                </div>
+
+
+                <div id="masVendido" class="col-md-11 botones-filtros mt-4 mb-3">
+
+                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+
+                        <p class="pt-3 pb-1 fs-5 texto-prueba">Más vendido</p>
+                        <img class="pt-1" src="/src/ventas.png" width="40" alt="estrella">
+
+                    </a>
+
+                </div>
+
+                <div id="masNuevo" class="col-md-11 botones-filtros mt-4 mb-4">
+
+                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+
+                        <p class="pt-3 pb-1 fs-5 texto-prueba">Lo más nuevo</p>
+                        <img class="pt-1" src="/src/nuevo1.png" width="40" alt="estrella">
+
+                    </a>
+
+                </div>
+
+                <div id="masBarato" class="col-md-11 botones-filtros mt-4 mb-3">
+
+                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+
+                        <p class="pt-3 pb-1 fs-5 texto-prueba">Más barato</p>
+                        <img class="pt-1" src="/src/precio-bajo.png" width="40" alt="estrella">
+
+                    </a>
+
+                </div>
+
+                <div id="oferta" class="col-md-11 botones-filtros mt-4 mb-3">
+
+                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+
+                        <p class="pt-3 pb-1 fs-5 texto-prueba">En oferta</p>
+                        <img class="pt-1" src="/src/etiqueta-de-precio.png" width="40" alt="estrella">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-8">
+
+            <div class="pt-4 pb-2 categoria-texto">
+
+                <p class="fs-5">Categorias</p>
+
+            </div>
+
+            <button class="ms-3 btn btn-primary boton-sesion filtros-boton fs-5" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling">Categorias</button>
+
+            <div class="row d-flex justify-content-between">
+
+                <div id="TodosID" class="col-xl-1 container-categorias active2 container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/todos.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Todos</p>
+
+                    </a>
+
+                </div>
+
+                <div id="PianosID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/mochila.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Pianos</p>
+
+                    </a>
+
+                </div>
+
+                <div id="GuitarrasID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/termo.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Guitarras</p>
+
+                    </a>
+
+                </div>
+
+                <div id="BajosID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/lapiz.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Bajos</p>
+
+                    </a>
+
+                </div>
+
+                <div id="ViolinesID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/cuaderno.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Violines</p>
+
+                    </a>
+
+                </div>
+
+                <!--<div class="col-xl-1 container-categorias">
+
+                    <a href="#" class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 px-0 mb-3" src="/src/kits.png" width="70" alt="">
+
+                        <p class="mb-2 texto-prueba">Kits</p>
+
+                    </a>
+
+                </div>-->
+
+                <div id="TrompetasID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/uniforme.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Trompetas</p>
+
+                    </a>
+
+                </div>
+
+                <div id="BateriasID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/accesiorio.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Baterias</p>
+
+                    </a>
+
+                </div>
+
+                <div id="AcordeonesID" class="col-xl-1 container-categorias container-categorias2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria texto-mejor a-color">
+
+                        <img class="mt-3 mb-3" src="/src/otros.png" width="50" alt="">
+
+                        <p style="text-decoration: none; color: black;" class="mb-2 texto-prueba">Acordeones</p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div id="contenedor-productos" class="row d-flex justify-content-around mt-5">
+                <!--AQUÍ SE LLENAN LOS PRODUCTOS
+
+
+                <div class="col-xxl-3 col-xl-4 col-sm-6 d-flex justify-content-center mb-3">
+
+                    <a href="#" class="a-color tarjeta-producto">
+
+                        <div class="d-flex flex-column align-items-center">
+
+                            <img src="/src/Termos/termo-1.png" width="225" alt="Termo">
+                            <p class="mb-0 mt-1">Mega termo increíble</p>
+                            <p class="fw-bold fst-italic">50.000$</p>
+
+                        </div>
+
+                    </a>
+
+                    <div class="container-carrito">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart agregar-carrito" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                          </svg>
+
+                    </div>
+
+                    <div class="container-favorito">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                          </svg>
+
+                    </div>
+
+                </div>
+                -->
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <footer class="container-fluid footer-home d-flex flex-column align-items-center mt-5">
+
+        <img class="mb-1 mt-2" src="/src/logobBlanco.png" width="200" alt="">
+        <p class="fs-6">Copyright© 2025</p>
+
+    </footer>
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El producto ha sido agregado al carrito de compras
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary boton-registro"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalFavorito" tabindex="-1" aria-labelledby="exampleModalLabelFavorito"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabelFavorito">Favoritos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    El producto ha sido agregado a tus favoritos
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary boton-registro"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel2">Error</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Debes iniciar sesión si quieres agregar productos al carro de compras
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-secondary boton-sesion" href="./index.html">Iniciar sesión</a>
+                    <button type="button" class="btn btn-secondary boton-registro"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel9" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel9">Error</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Debes iniciar sesión si quieres agregar productos a tu lista de favoritos
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-secondary boton-sesion" href="./index.html">Iniciar sesión</a>
+                    <button type="button" class="btn btn-secondary boton-registro"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Filtros</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="row d-flex justify-content-center">
+
+                <div id="TodosID" class="col-9 mt-2 container-categorias active2">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/todos.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Todos</p>
+
+                    </a>
+
+                </div>
+
+                <div id="PianosID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/mochila.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Pianos</p>
+
+                    </a>
+
+                </div>
+
+                <div id="GuitarrasID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/termo.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Guitarras</p>
+
+                    </a>
+
+                </div>
+
+                <div id="BajosID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/lapiz.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Bajos</p>
+
+                    </a>
+
+                </div>
+
+                <div id="ViolinesID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/cuaderno.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Violines</p>
+
+                    </a>
+
+                </div>
+
+
+                <div id="TrompetasID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/uniforme.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Trompetas</p>
+
+                    </a>
+
+                </div>
+
+                <div id="BateriasID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+
+                        <img class="mt-3 mb-3" src="/src/accesiorio.png" width="50" alt="">
+
+                        <p class="mb-2 texto-prueba">Baterias</p>
+
+                    </a>
+
+                </div>
+
+                <div id="AcordeonesID" class="col-9 mt-2 container-categorias">
+
+                    <a class="d-flex flex-column align-items-center items-categoria texto-mejor a-color">
+
+                        <img class="mt-3 mb-3" src="/src/otros.png" width="50" alt="">
+
+                        <p style="text-decoration: none; color: black;" class="mb-2 texto-prueba">Acordeones</p>
+
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling2" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body row align-content-start justify-content-center">
+            <button onclick="returnSesion()"
+                class="col-9 mt-3 btn btn-sm btn-outline-secondary fs-6 boton-sesion log-out" type="button">Iniciar
+                sesión</button>
+            <button onclick="returnRegister()"
+                class="col-9 mt-3 btn btn-sm btn-outline-secondary fs-6 boton-registro log-out"
+                type="button">Registrarse</button>
+
+            <button id="cerrar-sesion2" class="col-9 mt-3 btn btn-sm btn-outline-secondary fs-6 boton-registro log-in"
+                type="button">Cerrar sesión</button>
+
+            <button onclick="returnCuenta()"
+                class="col-9 mt-3 btn btn-sm btn-outline-secondary fs-6 boton-sesion log-in"
+                type="button">Cuenta</button>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="modal fade" id="modalCompraHecha" tabindex="-1" aria-labelledby="compraHechaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title text-success fs-5" id="compraHechaLabel">Compra realizada</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Muchas gracias por su compra.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary boton-registro" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./javaProductos.js" type="module"></script>
+    <!--<script src="./java.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="./Redireccion.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</body>
+
+</html>

@@ -1,0 +1,599 @@
+/*.icon-page{
+
+    width: 40%;
+
+}*/
+
+.icon-page2 {
+
+    height: 1%;
+}
+
+#boton-redireccionar,
+#redireccionar2 {
+
+    background-color: #EC690D !important;
+    border-color: #EC690D !important;
+
+}
+
+#boton-redireccionar:hover,
+#redireccionar2:hover {
+
+    background-color: #FF8431 !important;
+    border-color: #FF8431 !important;
+
+}
+
+body {
+
+    background-color: #E5E5E3;
+    overflow-x: hidden;
+
+}
+
+.contenedor-sesion {
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+}
+
+.bienvenido {
+
+    color: black;
+
+}
+
+.pruba2 {
+
+    max-height: min-content;
+
+}
+
+.input-inicio {
+
+    background-color: white;
+    border: 0;
+    color: #6c757d;
+
+}
+
+#emailHelp {
+
+    text-decoration: none;
+
+}
+
+.google-margin {
+
+    margin-right: 4px;
+
+}
+
+.facebook-margin {
+
+    margin-left: 4px;
+
+}
+
+.boton-centrar {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42%;
+
+}
+
+.no-account {
+
+    display: inline;
+    margin: 0;
+    color: black;
+
+}
+
+.crear-cuenta {
+
+    /*color: white;*/
+    text-decoration: none;
+    font-weight: bold;
+    color: black !important;
+
+}
+
+.img-fondo1 {
+    position: relative;
+    background-image: url(/src/TiendaImagen.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/imagentienda4.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.img-fondo1:hover .overlay2 {
+    opacity: 1;
+}
+
+
+.img-fondo2 {
+    position: relative;
+    background-image: url(/src/imagentienda2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/src/imagentienda3.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.img-fondo2:hover .overlay {
+    opacity: 1;
+}
+
+
+.boton-desplegar {
+
+    background-image: url(./src/border-width.svg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Cambiar el color del icono de calendario en Chrome y Edge */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(40%);
+    /* Cambiar el color del icono */
+}
+
+.icon-page2 {
+
+    width: 10%;
+
+}
+
+
+/*ULTIMA PERSONALIZACIÓN SESION*/
+.body-sesion {
+
+    background-color: #E8E8E8;
+
+}
+
+.section-sesion {
+
+    background-color: #F4F4F4;
+    border-radius: 20px;
+
+}
+
+@media (max-width: 991px) {
+
+    .icon-page {
+
+        width: 5rem;
+
+    }
+
+}
+
+
+/*HOME*/
+
+
+.input-search {
+
+    background-color: #F2F2F2;
+    border-color: #F2F2F2;
+
+}
+
+.boton-sesion {
+
+    background-color: #F26803 !important;
+    border-color: #F26803 !important;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.boton-sesion:hover {
+
+    background-color: #FFA669 !important;
+    border-color: #FFA669 !important;
+
+}
+
+.boton-registro {
+
+    background-color: #5A0317 !important;
+    border-color: #5A0317 !important;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.boton-registro:hover {
+
+    background-color: #932E49 !important;
+    border-color: #932E49 !important;
+    color: white;
+
+}
+
+.container-carrusel {
+
+    background-image: url(/src/backgroundImagen.png);
+
+}
+
+.containter-filtros {
+
+    background-color: #DDDCD7;
+    border-radius: 10px;
+    height: auto;
+
+}
+
+.botones-filtros {
+
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+}
+
+.botones-filtros:hover {
+
+    background-color: #5A0317;
+    color: white;
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+.botones-filtros.active{
+
+    background-color: #5A0317;
+    color: white;
+
+}
+
+.texto-mejor {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.footer-home {
+
+    background-color: #5A0317;
+    color: white;
+
+}
+
+.container-categorias {
+
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    font-size: 78%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+
+}
+
+.container-categorias:hover {
+
+    background-color: #5A0317;
+    color: white !important;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.container-categorias.active2{
+
+    background-color: #5A0317;
+    color: white !important;
+
+}
+
+.texto-prueba {
+
+    text-decoration: none !important;
+    color: inherit !important;
+
+}
+
+.a-color {
+
+    text-decoration: none !important;
+    color: inherit !important;
+
+}
+
+@media (max-width: 1199px) {
+
+    .container-categorias2 {
+
+        display: none;
+
+    }
+
+    .contenedor-info-usuario{
+
+        width: 100%!important;
+
+    }
+
+    .contenedor-usuario{
+
+        width: 100%!important;
+
+    }
+
+    .filtros-boton{
+
+        margin-top: 20px;
+        display: block !important;
+
+    }
+
+    .categoria-texto{
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width: 880px) {
+
+    .botones-usuario{
+
+        display: none !important;
+
+    }
+
+    .boton-desplegar{
+
+        display: block !important;
+
+    }
+
+    .esconder-nav{
+
+        display: none !important;
+
+    }
+
+    .nav-responsive{
+
+        justify-content: space-around !important;
+
+    }
+
+}
+
+.boton-desplegar{
+
+    color: #EC690D;
+    cursor: pointer;
+    display: none;
+
+}
+
+.filtros-boton{
+
+    display: none;
+
+}
+
+/*ULTIMOS CAMBIOS*/
+
+.iconos-compras{
+
+    color: white;
+    position: relative;
+
+}
+
+#loader-pagina{
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    background-color: white;
+    transition: opacity 1s, visibility 1s;
+
+}
+
+#loader-pagina2{
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    background-color: white;
+    transition: opacity 1s, visibility 1s;
+    opacity: 50%;
+
+}
+
+.iconos-compras:hover span{
+
+    background-color: #5A0317;
+    color: white!important;
+
+}
+
+.numero-compras{
+
+    position: absolute;
+    background-color: #F26803;
+    text-decoration: none !important;
+    color: inherit !important;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+
+}
+
+.corazon{
+
+    margin-top: 5px;
+
+}
+
+.tarjeta-producto:hover, .tarjeta-producto2:hover{
+
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+.tarjeta-producto, .tarjeta-producto2{
+
+    transition: transform 0.3s ease;
+
+}
+
+
+/*MODAL CARRO
+
+.carro-vacio{
+
+    display: block;
+
+}*/
+
+.iconos-eliminar{
+
+    text-decoration: none !important;
+    color: inherit !important;
+
+}
+
+.iconos-eliminar:hover{
+
+    stroke: red; /* Cambia el color del trazo al pasar el mouse sobre el SVG */
+    stroke-width: 0.5;
+
+}
+
+.elementos-centrar-carro{
+
+    padding-top: 50px!important;
+
+}
+
+.disabled{
+
+    display: none;
+
+}
+
+
+/*ULTIMA PERSONALIZACIÓN CARRITO COMPRAS*/
+
+.container-carrito{
+
+    color: black;
+    background: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 160px;
+    border-style: none;
+    border-bottom-style: outset;
+
+}
+
+.container-favorito{
+
+    color: black;
+    background: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 160px;
+    border-style: none;
+    border-bottom-style: outset;
+
+}
+
+.container-carrito:hover, .container-favorito:hover{
+
+    background: #DDDCD7;
+    cursor: pointer;
+
+}
+
+/*PERSONALIZACIÓN HTML USUARIO*/
+
+.contenedor-usuario{
+
+    background-color: #F4F4F4;
+    border-radius: 15px;
+
+
+}
+
+/*
+.container-fondo-usuario{
+
+    background-image: url(./src/fondo-usuario.png);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+}*/

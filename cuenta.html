@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="/src/todos.png" type="image/x-icon">
+
+</head>
+
+<body class="min-vh-100">
+
+    <div id="loader-pagina">
+
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+    </div>
+
+    <div style="display: none;" id="loader-pagina2">
+
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+    </div>
+
+    <div class="d-flex flex-column min-vh-100 justify-content-between">
+
+        <nav class="navbar bg-body-tertiary bg-white">
+
+            <div class="justify-content-between row w-100">
+
+                <div class="d-flex align-items-center col-5">
+
+                    <button onclick="returnCatalogo()"
+                        class="btn btn-sm btn-outline-secondary ms-4 px-3 fs-6 boton-sesion"
+                        type="button">Catálogo</button>
+
+                </div>
+
+                <div class="container-fluid col-7">
+                    <img src="/src/LogoHome.png" class="ms-5 mb-1 mt-1" width="180" class="pb-3" alt="usb.png">
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <div class="container-fondo-usuario">
+
+        </div>
+
+        <div id="usuarioNoRegistrado" class="alert alert-danger alert-dismissible fade show container" role="alert"
+            style="display: none;">
+            <span class="fs-4 fw-bold" >Error</span><br> Debes iniciar sesión para poder ver la información de tu cuenta.
+        </div>
+
+        <div class="container mt-4 mb-4 w-50 contenedor-usuario d-flex flex-column align-items-center">
+
+            <div class="d-flex justify-content-center mt-3 mb-3">
+
+                <img class="img-fluid" width="35%" height="35%" src="./src/usuario.png" alt="usuario.png">
+
+            </div>
+
+            <div class="row container w-75 contenedor-info-usuario">
+
+                <div class="col-md-6 mb-3">
+
+                    <p for="mostarInfoNombre" class="form-label">Nombre</p>
+                    <p class="form-control input-inicio" id="mostarInfoNombre">Usuario</p>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <p for="mostarInfoApellido" class="form-label">Apellidos</p>
+                    <p class="form-control input-inicio" id="mostarInfoApellido">Usuario Apellidos</p>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+
+                    <p for="mostarInfoCorreo" class="form-label">Correo</p>
+                    <p class="form-control input-inicio" id="mostarInfoCorreo">usuario@correo</p>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <p for="mostarInfoFecha" class="form-label">Fecha de nacimiento</p>
+                    <p class="form-control input-inicio" id="mostarInfoFecha">Fecha Usuario</p>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <button data-bs-toggle="modal" data-bs-target="#modalCambiarContraseña" id="cambiarContraseña" class="btn btn-sm btn-outline-secondary w-100 mb-3 px-3 fs-6 boton-sesion"
+                        type="button">Cambiar contraseña</button>
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <a class="btn btn-sm btn-outline-secondary w-100 mb-3 px-3 fs-6 boton-sesion" href="#"
+                        data-bs-toggle="modal" data-bs-target="#exampleModalCompras">Historial de compras</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer class="container-fluid footer-home d-flex flex-column align-items-center">
+
+            <img class="mb-1 mt-2" src="/src/logobBlanco.png" width="200" alt="">
+            <p class="fs-6">Copyright© 2023</p>
+
+        </footer>
+
+    </div>
+
+    <div class="modal fade" id="exampleModalCompras" tabindex="-1" aria-labelledby="exampleModalLabelCompras"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabelCompras">Historial de compras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="container-compras-vacio" class="carro-vacio">
+
+                        <p class="fs-5 fw-bold fst-italic">¡Oh no!</p>
+                        <p>No has realizdo ninguna compra aún</p>
+
+                    </div>
+
+                    <div id="container-no-iniciado" class="disabled">
+
+                        <p class="fs-4 fw-bold">Error</p>
+                        <p>Debes iniciar sesión para poder ver tus compras</p>
+
+                    </div>
+
+                    <div class="row">
+
+                        <table class="table disabled" id="titulos-compras">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" scope="col">Producto</th>
+                                    <th class="text-center" scope="col">Detalle</th>
+                                    <th class="text-center" scope="col">Pagado</th>
+                                    <th class="text-center" scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="container-productos-compras" class="disabled">
+
+                                <!--CONTAINER CARRITO PRODUCTOS
+                                <tr>
+                                    <th class="text-center"><img src="./src/Accesorios/accesorio-1.png" width="100" alt="producto"></th>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0">Gafas re piolas</p></td>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0 fw-bold fst-italic mt-1">50.000$</p></td>
+                                    <td class="text-center elementos-centrar-carro"><p class="mb-0">1</p></td>
+                                    <td class="text-center elementos-centrar-carro"><a class="iconos-eliminar" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                      </svg></a></td>
+                                </tr>-->
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <div>
+
+                        <button type="button" class="btn btn-secondary boton-registro"
+                            data-bs-dismiss="modal">Cerrar</button>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCambiarContraseña" tabindex="-1" aria-labelledby="modalCambiarContraseñaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalCambiarContraseñaLabel">Cambiar contraseña</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="inputContraseñaActual" class="form-label">Contraseña Actual</label>
+                    <input type="password" class="form-control" id="inputContraseñaActual" placeholder="Contraseña actual">
+                    <label for="inputNuevaContraseña" class="form-label">Nueva contraseña</label>
+                    <input type="password" class="form-control" id="inputNuevaContraseña" placeholder="Nueva contraseña">
+                </div>
+                <div class="alert alert-success" role="alert" style="display: none;">
+                    Contraseña cambiada con éxito.
+                </div>
+                <div class="alert alert-danger" role="alert" style="display: none;">
+                    Error al cambiar la contraseña.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary boton-registro" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="botonCambiarContraseña" type="button" class="btn btn-primary boton-sesion">Cambiar contraseña</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./java3.js" type="module"></script>
+    <!--<script src="./java.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="./Redireccion.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</body>
+
+</html>
