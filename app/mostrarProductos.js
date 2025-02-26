@@ -32,8 +32,8 @@ export function mostrarProductos(prod){
                     <div class="d-flex flex-column align-items-center">
         
                         <img src="${productos.imagen}" width="225" alt="${productos.nombre}">
-                        <p class="mb-0 mt-1">${productos.nombre}</p>
-                        <p class="fw-bold fst-italic">${productos.precio}$</p>
+                        <p class="mb-0 mt-1 fw-bold">${productos.nombre}</p>
+                        <p class="fst-italic">${productos.precio}$</p>
         
                     </div>
                     

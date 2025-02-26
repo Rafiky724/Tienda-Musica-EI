@@ -12,16 +12,16 @@
 #boton-redireccionar,
 #redireccionar2 {
 
-    background-color: #EC690D !important;
-    border-color: #EC690D !important;
+    background-color: #001127 !important;
+    border-color: #001127 !important;
 
 }
 
 #boton-redireccionar:hover,
 #redireccionar2:hover {
 
-    background-color: #FF8431 !important;
-    border-color: #FF8431 !important;
+    background-color: #021e42 !important;
+    border-color: #021e42 !important;
 
 }
 
@@ -29,6 +29,7 @@ body {
 
     background-color: #E5E5E3;
     overflow-x: hidden;
+    font-family: "Poppins", serif;
 
 }
 
@@ -209,8 +210,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .input-search {
 
-    background-color: #F2F2F2;
-    border-color: #F2F2F2;
+    background-color: white;
+    border-color: white;
+    color: #939393 !important;
 
 }
 
@@ -219,29 +221,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #001127;
     background-color: transparent !important;
     border: transparent !important;
+    font-weight: 600;
 
 }
-/*
+
 .boton-sesion:hover {
 
-    
+    background-color: transparent !important;
+    color: #001127;
 
-}*/
+}
 
 .boton-registro {
 
     color: #001127;
     border: transparent !important;
+    background-color: transparent !important;
+    font-weight: 600;
 
 }
-/*
+
 .boton-registro:hover {
 
-    background-color: #932E49 !important;
-    border-color: #932E49 !important;
-    color: white;
+    color: #001127;
+    background-color: transparent !important;
 
-}*/
+}
 
 .container-carrusel {
 
@@ -249,34 +254,33 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
+/*
 .containter-filtros {
 
-    background-color: #DDDCD7;
-    border-radius: 10px;
     height: auto;
 
-}
+}*/
 
 .botones-filtros {
 
-    background-color: #F2F2F2;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 20px;
+    color: #727272;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 
 }
 
 .botones-filtros:hover {
 
-    background-color: #5A0317;
+    background-color: #001127;
     color: white;
-    transform: scale(1.05);
     cursor: pointer;
 
 }
 
 .botones-filtros.active{
 
-    background-color: #5A0317;
+    background-color: #001127;
     color: white;
 
 }
@@ -290,16 +294,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .footer-home {
 
-    background-color: #5A0317;
+    background-color: #001127;
     color: white;
 
 }
 
 .container-categorias {
 
-    background-color: #F2F2F2;
-    border-radius: 10px;
-    font-size: 78%;
+    background-color: white;
+    font-size: 100%;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 
 
@@ -307,15 +310,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .container-categorias:hover {
 
-    background-color: #5A0317;
+    background-color: #001128;
     color: white !important;
-    transform: scale(1.05);
     cursor: pointer;
 }
 
 .container-categorias.active2{
 
-    background-color: #5A0317;
+    background-color: #001128;
     color: white !important;
 
 }
@@ -467,7 +469,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .iconos-compras:hover span{
 
-    background-color: #5A0317;
+    background-color: #021e42;
     color: white!important;
 
 }
@@ -475,7 +477,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .numero-compras{
 
     position: absolute;
-    background-color: #F26803;
+    background-color: #001127;
     text-decoration: none !important;
     color: inherit !important;
     border-radius: 100%;
@@ -548,7 +550,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .container-carrito{
 
     color: black;
-    background: white;
+    background: #EEF3F7;
     border-radius: 100%;
     width: 40px;
     height: 40px;
@@ -559,14 +561,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 10px;
     margin-left: 160px;
     border-style: none;
-    border-bottom-style: outset;
 
 }
 
 .container-favorito{
 
     color: black;
-    background: white;
+    background: #EEF3F7;
     border-radius: 100%;
     width: 40px;
     height: 40px;
@@ -577,7 +578,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 60px;
     margin-left: 160px;
     border-style: none;
-    border-bottom-style: outset;
 
 }
 

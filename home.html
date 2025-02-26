@@ -9,6 +9,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="/src/todos.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -31,7 +34,7 @@
     </div>
     
 
-    <nav class="navbar bg-body-tertiary bg-white">
+    <nav class="navbar bg-body-tertiary bg-white" style="padding: 0; height: 40%;">
 
         <form class="container-fluid justify-content-between d-flex nav-responsive" role="search" style="background-color: #EDF2F6;">
 
@@ -61,7 +64,7 @@
 
             </div>
 
-            <img src="/src/LogoHome.png" width="180" class="pb-3" alt="usb.png">
+            <img src="/src/LogoHome.png" width="150" alt="usb.png">
 
 
             <div class="d-flex align-items-center">
@@ -285,16 +288,13 @@
         </div>
         -->
 
-        <div id="carouselExampleAutoplaying1" class="carousel slide col-md-6" data-bs-ride="carousel">
+        <div id="carouselExampleAutoplaying1" class="carousel slide col-md-12" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/src/carrusel-1.1.png" class="d-block w-100 py-4 rounded" alt="...">
+                    <img src="/src/carrusel-new.png" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="/src/carrusel-1.2.png" class="d-block w-100 py-4 rounded" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="/src/carrusel-1.3.png" class="d-block w-100 py-4 rounded" alt="...">
+                    <img src="/src/carrusel-new2.png" class="d-block w-100 rounded" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying1"
@@ -313,7 +313,7 @@
 
             <img src="/src/carrusel-2.png" class="img-fluid py-4" alt="carrusel-2.png">
 
-        </div>-->
+        </div>
 
         <div id="carouselExampleAutoplaying2" class="carousel slide col-md-4" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -334,13 +334,13 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div>-->
 
     </div>
 
     <div class="row d-flex justify-content-around">
 
-        <div class="col-md-3 ms-2 d-flex row align-self-start">
+        <div class="col-md-3 mt-5 ms-2 d-flex row align-self-start">
 <!--
             <div class="col-md-12 row containter-filtros d-flex justify-content-center">
 
@@ -402,53 +402,98 @@
 
             </div>-->
 
-            <div class="col-md-12 flex-column d-flex justify-content-between">
+            <div class="col-md-12 flex-column d-flex justify-content-center" style="background-color: white; padding: 0%;">
 
                 <div id="TodosID" class="container-categorias active2 container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Todos</p>
+                        <p class="mb-3 mt-3 texto-prueba">Todos los productos</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
+
+                </div>
+
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
 
                 </div>
 
                 <div id="PianosID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Pianos</p>
+                        <p class="mb-3 mt-3 texto-prueba">Pianos</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
+
+                </div>
+
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
 
                 </div>
 
                 <div id="GuitarrasID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Guitarras</p>
+                        <p class="mb-3 mt-3 texto-prueba">Guitarras</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
+
+                </div>
+
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
 
                 </div>
 
                 <div id="BajosID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Bajos</p>
+                        <p class="mb-3 mt-3 texto-prueba">Bajos</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
 
                 </div>
 
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                </div>
+
                 <div id="ViolinesID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Violines</p>
+                        <p class="mb-3 mt-3 texto-prueba">Violines</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
 
@@ -456,41 +501,75 @@
 
                 <!--<div class="col-xl-1 container-categorias">
 
-                    <a href="#" class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a href="#" class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
                         <img class="mt-3 px-0 mb-3" src="/src/kits.png" width="70" alt="">
 
                         <p class="mb-2 texto-prueba">Kits</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
 
                 </div>-->
 
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                </div>
+
                 <div id="TrompetasID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Trompetas</p>
+                        <p class="mb-3 mt-3 texto-prueba">Trompetas</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
+
+                </div>
+
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
 
                 </div>
 
                 <div id="BateriasID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p class="mb-2 texto-prueba">Baterias</p>
+                        <p class="mb-3 mt-3 texto-prueba">Baterias</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
 
                 </div>
 
+                <div class="d-flex row justify-content-center" style="height: 1px; border-radius: 1px;">
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                    <div class="col-lg-10" style="background-color: #CCCCCC;"></div>
+
+                    <div class="col-lg-1" style="background-color: transparent;"></div>
+
+                </div>
+
                 <div id="AcordeonesID" class="container-categorias container-categorias2">
 
-                    <a class="d-flex flex-column align-items-center items-categoria texto-mejor a-color">
+                    <a class="d-flex align-items-center justify-content-between mx-4 items-categoria a-color">
 
-                        <p style="text-decoration: none; color: black;" class="mb-2 texto-prueba">Acordeones</p>
+                        <p style="text-decoration: none; color: black;" class="mb-3 mt-3 texto-prueba">Acordeones</p>
+                        <img src="./src/flecha.png" style="width: 5%;" alt="flecha">
 
                     </a>
 
@@ -501,7 +580,7 @@
         </div>
 
 
-        <div class="col-md-8">
+        <div class="col-md-8 mt-5">
 
             <button class="ms-3 btn btn-primary boton-categoria-rs filtros-boton fs-5" type="button"
                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
@@ -624,52 +703,57 @@
 
             <div class="d-flex row containter-filtros d-flex justify-content-between">
 
-                <div id="mejorValorado" class="col-md-2 botones-filtros mt-4 mb-3">
+                <div id="mejorValorado" class="col-md-2 botones-filtros align-items-center">
 
-                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+                    <a class="d-flex h-100 justify-content-around align-items-center w-100 a-color">
 
-                        <p class="pt-3 pb-1 fs-5 texto-prueba">Mejor valorado</p>
-
-                    </a>
-
-                </div>
-
-
-                <div id="masVendido" class="col-md-2 botones-filtros mt-4 mb-3">
-
-                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
-
-                        <p class="pt-3 pb-1 fs-5 texto-prueba">Más vendido</p>
+                        <p style="margin: 0;" class="texto-prueba ">Mejor valorado</p>
+                        <img src="/src/flecha2.png" style="width: 10%;" alt="flecha">
 
                     </a>
 
                 </div>
 
-                <div id="masNuevo" class="col-md-2 botones-filtros mt-4 mb-4">
 
-                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+                <div id="masVendido" class="col-md-2 botones-filtros">
 
-                        <p class="pt-3 pb-1 fs-5 texto-prueba">Lo más nuevo</p>
+                   <a class="d-flex h-100 justify-content-around align-items-center w-100 a-color">
 
-                    </a>
-
-                </div>
-
-                <div id="masBarato" class="col-md-2 botones-filtros mt-4 mb-3">
-
-                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
-
-                        <p class="pt-3 pb-1 fs-5 texto-prueba">Más barato</p>
+                        <p style="margin: 0;" class="texto-prueba">Más vendido</p>
+                        <img src="/src/flecha2.png" style="width: 10%;" alt="flecha">
 
                     </a>
 
                 </div>
 
-                <div id="oferta" class="col-md-2 botones-filtros mt-4 mb-3">
+                <div id="masNuevo" class="col-md-2 botones-filtros">
 
-                    <a class="d-flex justify-content-between align-items-center w-100 a-color">
+                   <a class="d-flex h-100 justify-content-around align-items-center w-100 a-color">
 
-                        <p class="pt-3 pb-1 fs-5 texto-prueba">En oferta</p>
+                        <p style="margin: 0;" class="texto-prueba">Lo más nuevo</p>
+                        <img src="/src/flecha2.png" style="width: 10%;" alt="flecha">
+
+                    </a>
+
+                </div>
+
+                <div id="masBarato" class="col-md-2 botones-filtros">
+
+                   <a class="d-flex h-100 justify-content-around align-items-center w-100 a-color">
+
+                        <p style="margin: 0;" class="texto-prueba py-2">Más barato</p>
+                        <img src="/src/flecha2.png" style="width: 10%;" alt="flecha">
+
+                    </a>
+
+                </div>
+
+                <div id="oferta" class="col-md-2 botones-filtros">
+
+                   <a class="d-flex h-100 justify-content-around align-items-center w-100 a-color">
+
+                        <p style="margin: 0;" class="texto-prueba">En oferta</p>
+                        <img src="/src/flecha2.png" style="width: 10%;" alt="flecha">
 
                     </a>
 

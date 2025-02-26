@@ -17,7 +17,12 @@ IniciarSesionForm.addEventListener('submit', async e => {
     try {
         
         const credentials = await signInWithEmailAndPassword(auth, email, password)
+
+        loginAlert.style.display = "none";
+        console.log(credentials);
+        window.location.href = "./home.html";
         
+        /*
         //TIENE QUE SE TRUE PARA CONFIRMAR VERIFICACION
         if (credentials.user.emailVerified === true) {
             loginAlert.style.display = "none";
@@ -29,7 +34,7 @@ IniciarSesionForm.addEventListener('submit', async e => {
             loginAlert.style.display = "block";
             await signOut(auth);
 
-        }
+        }*/
 
         loadingIndicator.style.display = 'none';
         //loginAlert.style.display = "none";
