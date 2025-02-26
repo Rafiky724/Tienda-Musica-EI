@@ -216,36 +216,32 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .boton-sesion {
 
-    background-color: #F26803 !important;
-    border-color: #F26803 !important;
-    color: white;
-    border-radius: 5px;
+    color: #001127;
+    background-color: transparent !important;
+    border: transparent !important;
 
 }
-
+/*
 .boton-sesion:hover {
 
-    background-color: #FFA669 !important;
-    border-color: #FFA669 !important;
+    
 
-}
+}*/
 
 .boton-registro {
 
-    background-color: #5A0317 !important;
-    border-color: #5A0317 !important;
-    color: white;
-    border-radius: 5px;
+    color: #001127;
+    border: transparent !important;
 
 }
-
+/*
 .boton-registro:hover {
 
     background-color: #932E49 !important;
     border-color: #932E49 !important;
     color: white;
 
-}
+}*/
 
 .container-carrusel {
 
@@ -371,6 +367,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     }
 
+    .boton-categoria-rs{
+
+        background-color: transparent !important;
+        color: #001127;
+        border-color: transparent !important;
+
+    }
+
 }
 
 @media (max-width: 880px) {
@@ -396,6 +400,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .nav-responsive{
 
         justify-content: space-around !important;
+
+    }
+
+    .boton-categoria-rs{
+
+        background-color: transparent !important;
+        color: #001127;
+        border-color: transparent !important;
 
     }
 
@@ -597,3 +609,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-position: center;
 
 }*/
+
+.body-bg-color{
+
+    background-color: #EDF2F6;
+
+}
